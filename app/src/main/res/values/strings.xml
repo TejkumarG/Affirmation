@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Motivation</string>
+    <string name="share_via">Share Via</string>
+    <string name="oops_we_cannot_do_this">Oops, we cannot do this</string>
+</resources>

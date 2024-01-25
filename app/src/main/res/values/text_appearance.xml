@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.Motivation.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="fontFamily">@font/dm_sans_bold</item>
+        <item name="android:fontFamily">@font/dm_sans_bold</item>
+        <item name="android:textSize">@dimen/text_size_48</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Motivation.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/dm_sans_bold</item>
+        <item name="android:fontFamily">@font/dm_sans_bold</item>
+        <item name="android:textSize">@dimen/text_size_34</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Motivation.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/dm_sans_bold</item>
+        <item name="android:fontFamily">@font/dm_sans_bold</item>
+        <item name="android:textSize">@dimen/text_size_20</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Motivation.Headline6" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/dm_sans_bold</item>
+        <item name="android:fontFamily">@font/dm_sans_bold</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Motivation.TitleLarge" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="fontFamily">@font/dm_sans_medium</item>
+        <item name="android:fontFamily">@font/dm_sans_medium</item>
+        <item name="android:textSize">@dimen/text_size_24</item>
+    </style>
+
+    <style name="TextAppearance.Motivation.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="fontFamily">@font/dm_sans_medium</item>
+        <item name="android:fontFamily">@font/dm_sans_medium</item>
+        <item name="android:textSize">@dimen/text_size_20</item>
+    </style>
+
+    <style name="TextAppearance.Motivation.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="fontFamily">@font/dm_sans_medium</item>
+        <item name="android:fontFamily">@font/dm_sans_medium</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+    </style>
+
+    <style name="TextAppearance.Motivation.Body1" parent="@style/TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="fontFamily">@font/dm_sans_regular</item>
+        <item name="android:fontFamily">@font/dm_sans_regular</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+        <item name="android:textSize">@dimen/text_size_18</item>
+    </style>
+
+    <style name="TextAppearance.Motivation.Body2" parent="@style/TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="fontFamily">@font/dm_sans_regular</item>
+        <item name="android:fontFamily">@font/dm_sans_regular</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+    </style>
+
+    <style name="TextAppearance.Motivation.BodyMedium" parent="@style/TextAppearance.Motivation.Body2">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+    <style name="TextAppearance.Motivation.BodySmall" parent="@style/TextAppearance.Motivation.Body2">
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+
+    <style name="TextAppearance.Motivation.Body2.FontBold">
+        <item name="fontFamily">@font/dm_sans_bold</item>
+        <item name="android:fontFamily">@font/dm_sans_bold</item>
+    </style>
+
+    <style name="TextAppearance.Motivation.Body2.FontMedium">
+        <item name="fontFamily">@font/dm_sans_medium</item>
+        <item name="android:fontFamily">@font/dm_sans_medium</item>
+    </style>
+
+    <style name="TextAppearance.Motivation.Body2.Secondary" parent="@style/TextAppearance.Motivation.Body2.FontMedium">
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="TextAppearance.Motivation.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/dm_sans_bold</item>
+        <item name="android:fontFamily">@font/dm_sans_bold</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+</resources>

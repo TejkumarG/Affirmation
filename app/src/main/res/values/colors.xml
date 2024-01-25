@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pickled_bluewood">#2B334D</color>
+    <color name="royal_blue">#345EF2</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_lilac">#F0F3FA</color>
+    <color name="alto">#DADADA</color>
+    <color name="catskill_white">#E1E8F1</color>
+
+    <color name="emerald">#54C18D</color>
+    <color name="thunderbird">#C91D1D</color>
+    <color name="lighting_yellow">#FFC924</color>
+
+    <color name="shuttle_gray">#666B7D</color>
+    <color name="manatee">#8A8F9D</color>
+
+    <color name="silver_chalice">#A8A8A8</color>
+    <color name="heather">#BBC2CE</color>
+
+    <color name="jungle_green">#26B973</color>
+    <color name="salmon">#FF7979</color>
+    <color name="salmon_transparent65">#FFB5B5</color>
+
+    <color name="fire_bush">#E8A530</color>
+
+    <color name="iron">#D3D5D9</color>
+    <color name="santas_gray">#9A9EA8</color>
+
+    <!-- Onboarding colors -->
+    <color name="algae_green">#91DBAA</color>
+
+    <color name="purple_navy">#485582</color>
+
+    <color name="sea_foam_green">#98DABB</color>
+    <color name="charcoal">#3A4056</color>
+
+    <color name="yankees_blue">#242B43</color>
+
+    <!-- Colors for [ic_feedback_sent.xml] drawable -->
+    <!-- End of colors for [ic_feedback_sent.xml] drawable -->
+
+    <!-- color for ads -->
+
+</resources>

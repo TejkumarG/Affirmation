@@ -1,0 +1,35 @@
+<resources>
+    <attr name="colorSurface2" format="color" />
+    <attr name="colorOnSurface2" format="color" />
+
+    <attr name="colorWarning" format="color" />
+    <attr name="colorOnWarning" format="color" />
+
+    <attr name="colorGreen" format="color" />
+    <attr name="colorOnGreen" format="color" />
+
+    <attr name="colorDisabled" format="color" />
+    <attr name="colorOnDisabled" format="color" />
+
+    <attr name="buttonStrokeColor" format="color" />
+    <attr name="buttonStrokeColorGreen" format="color" />
+    <attr name="buttonStrokeColorRed" format="color" />
+
+    <attr name="textAppearanceBody2FontBold" format="reference" />
+    <attr name="textAppearanceBody2FontMedium" format="reference" />
+    <attr name="textAppearanceBody2Secondary" format="reference" />
+
+    <attr name="materialCardViewSurface2Style" format="reference" />
+
+    <attr name="dialogMargin" format="dimension" />
+    <attr name="dialogStrokeWidth" format="dimension" />
+    <attr name="dialogStrokeColor" format="color" />
+
+    <attr name="textInputLayoutStrokeColor" format="color"/>
+    <attr name="textInputLayoutStrokeColorActive" format="color"/>
+    <attr name="textInputLayoutBackgroundColor" format="color"/>
+    <attr name="textInputLayoutBackgroundColorActive" format="color"/>
+    <attr name="switchTrackNotChecked" format="color"/>
+
+    <attr name="starStrokeTint" format="color"/>
+</resources>

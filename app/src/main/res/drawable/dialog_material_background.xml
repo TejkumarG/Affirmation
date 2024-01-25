@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:bottom="?attr/dialogMargin"
+        android:left="?attr/dialogMargin"
+        android:right="?attr/dialogMargin"
+        android:top="?attr/dialogMargin">
+
+        <shape android:shape="rectangle">
+            <corners android:radius="?attr/dialogCornerRadius" />
+            <solid android:color="?attr/colorSurface" />
+            <stroke
+                android:width="?attr/dialogStrokeWidth"
+                android:color="?attr/dialogStrokeColor" />
+            <padding
+                android:bottom="?attr/dialogMargin"
+                android:left="?attr/dialogMargin"
+                android:right="?attr/dialogMargin"
+                android:top="?attr/dialogMargin" />
+        </shape>
+    </item>
+</layer-list>

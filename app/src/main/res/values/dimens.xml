@@ -1,0 +1,94 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- region Offsets -->
+    <dimen name="offset_min" tools:ignore="UnusedResources">@dimen/_1sdp</dimen>
+    <dimen name="offset_tiny" tools:ignore="UnusedResources">@dimen/_3sdp</dimen>
+    <dimen name="offset_small" tools:ignore="UnusedResources">@dimen/_6sdp</dimen>
+    <dimen name="offset_medium" tools:ignore="UnusedResources">@dimen/_10sdp</dimen>
+    <dimen name="offset_regular" tools:ignore="UnusedResources">@dimen/_14sdp</dimen>
+    <dimen name="offset_average" tools:ignore="UnusedResources">@dimen/_18sdp</dimen>
+    <dimen name="offset_large" tools:ignore="UnusedResources">@dimen/_20sdp</dimen>
+    <dimen name="offset_huge" tools:ignore="UnusedResources">@dimen/_28sdp</dimen>
+    <dimen name="offset_big" tools:ignore="UnusedResources">@dimen/_40sdp</dimen>
+    <dimen name="offset_gigantic" tools:ignore="UnusedResources">@dimen/_48sdp</dimen>
+    <dimen name="offset_super_gigantic" tools:ignore="UnusedResources">@dimen/_60sdp</dimen>
+    <!-- endregion -->
+
+    <!-- region Text Sizes -->
+    <dimen name="text_size_10" tools:keep="@dimen/text_size_10">@dimen/_8ssp</dimen>
+    <dimen name="text_size_12" tools:keep="@dimen/text_size_12">@dimen/_10ssp</dimen>
+    <dimen name="text_size_13" tools:keep="@dimen/text_size_13">@dimen/_11ssp</dimen>
+    <dimen name="text_size_14" tools:ignore="UnusedResources">@dimen/_11ssp</dimen>
+    <dimen name="text_size_15" tools:ignore="UnusedResources">@dimen/_12ssp</dimen>
+    <dimen name="text_size_16" tools:ignore="UnusedResources">@dimen/_13ssp</dimen>
+    <dimen name="text_size_18" tools:keep="@dimen/text_size_18">@dimen/_14ssp</dimen>
+    <dimen name="text_size_20" tools:ignore="UnusedResources">@dimen/_16ssp</dimen>
+    <dimen name="text_size_24" tools:ignore="UnusedResources">@dimen/_19ssp</dimen>
+    <dimen name="text_size_26" tools:ignore="UnusedResources">@dimen/_21ssp</dimen>
+    <dimen name="text_size_32" tools:ignore="UnusedResources">@dimen/_24ssp</dimen>
+    <dimen name="text_size_34" tools:ignore="UnusedResources">@dimen/_27ssp</dimen>
+    <dimen name="text_size_36" tools:ignore="UnusedResources">@dimen/_32ssp</dimen>
+    <dimen name="text_size_48" tools:ignore="UnusedResources">@dimen/_38ssp</dimen>
+    <dimen name="text_size_58" tools:ignore="UnusedResources">@dimen/_46ssp</dimen>
+    <!-- endregion -->
+
+    <!-- region AppWidget -->
+    <!-- endregion -->
+
+    <!-- region Button -->
+    <dimen name="button_corner_radius">12dp</dimen>
+
+    <!-- endregion -->
+
+    <!-- region BottomNavigationView -->
+    <dimen name="design_bottom_navigation_height" tools:ignore="UnusedResources" tools:override="true">
+        76dp
+    </dimen>
+    <dimen name="design_bottom_navigation_margin" tools:ignore="UnusedResources" tools:override="true">
+        @dimen/offset_regular
+    </dimen>
+    <dimen name="bottom_navigation_corner_size">16dp</dimen>
+    <!-- endregion -->
+
+    <!-- region ProgressBar -->
+    <dimen name="progress_bar_size">76dp</dimen>
+
+    <!-- endregion -->
+
+    <!-- region CardView -->
+    <dimen name="card_view_corner_radius">16dp</dimen>
+
+    <!-- endregion -->
+
+    <!-- region Chip -->
+
+    <!-- endregion -->
+
+    <!-- region Dialog -->
+    <dimen name="dialog_corner_radius">16dp</dimen>
+    <!-- endregion -->
+
+    <!-- region Auto Text Size -->
+
+    <!-- endregion -->
+
+    <!-- region Background -->
+    <!-- endregion -->
+
+    <!-- region Notification -->
+    <!-- endregion -->
+
+    <!-- region Tooltip -->
+    <dimen name="tooltip_corner_radius">8dp</dimen>
+    <dimen name="tooltip_horizontal_padding">14dp</dimen>
+    <dimen name="tooltip_margin">@dimen/offset_average</dimen>
+    <dimen name="tooltip_vertical_padding">10dp</dimen>
+    <dimen name="tooltip_precise_anchor_extra_offset">0dp</dimen>
+    <dimen name="tooltip_y_offset_touch">0dp</dimen>
+    <dimen name="tooltip_precise_anchor_threshold">96dp</dimen>
+    <!-- endregion -->
+
+    <!-- region Other -->
+
+    <!-- endregion -->
+</resources>

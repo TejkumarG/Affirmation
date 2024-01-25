@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.V21.Night.Theme.Motivation" parent="Base.V21.Theme.Motivation">
+        <!-- Color palettes -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/pickled_bluewood</item>
+
+        <item name="colorSecondary">@color/royal_blue</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="android:windowBackground">@color/pickled_bluewood</item>
+        <item name="android:colorBackground">@color/pickled_bluewood</item>
+        <item name="colorOnBackground">@color/white</item>
+
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/iron</item>
+        <item name="android:textColorTertiary">@color/santas_gray</item>
+
+        <item name="colorSurface">@color/yankees_blue</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="colorSurface2">@color/yankees_blue</item>
+        <item name="colorOnSurface2">@color/white</item>
+
+        <item name="colorError">@color/salmon</item>
+        <item name="colorOnError">@color/pickled_bluewood</item>
+
+        <item name="colorWarning">@color/fire_bush</item>
+        <item name="colorOnWarning">@color/pickled_bluewood</item>
+
+        <item name="colorGreen">@color/jungle_green</item>
+        <item name="colorOnGreen">@color/pickled_bluewood</item>
+
+        <item name="colorDisabled">@color/silver_chalice</item>
+        <item name="colorOnDisabled">@color/alto</item>
+
+        <item name="buttonStrokeColor">@color/heather</item>
+        <item name="buttonStrokeColorGreen">@color/sea_foam_green</item>
+        <item name="buttonStrokeColorRed">@color/salmon_transparent65</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <item name="textInputLayoutStrokeColor">@color/heather</item>
+        <item name="textInputLayoutStrokeColorActive">@color/algae_green</item>
+
+        <item name="textInputLayoutBackgroundColor">@color/charcoal</item>
+        <item name="textInputLayoutBackgroundColorActive">@color/charcoal</item>
+
+        <item name="switchTrackNotChecked">@color/silver_chalice</item>
+
+        <item name="starStrokeTint">@color/purple_navy</item>
+    </style>
+
+    <style name="Base.Theme.Motivation" parent="Base.V21.Night.Theme.Motivation" />
+</resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- region Toolbar -->
+    <style name="Widget.Motivation.Toolbar" parent="Widget.MaterialComponents.Toolbar.Surface">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="titleTextAppearance">?attr/textAppearanceHeadline6</item>
+        <item name="android:paddingStart">@dimen/offset_huge</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region BottomSheet -->
+    <style name="Widget.Motivation.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:minHeight" tools:ignore="PrivateResource">
+            @dimen/design_bottom_navigation_height
+        </item>
+        <item name="backgroundTint">?attr/colorSurface</item>
+        <item name="itemIconTint">@null</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region ProgressBar -->
+    <style name="Widget.Motivation.ProgressBar" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:minHeight">@dimen/progress_bar_size</item>
+        <item name="android:minWidth">@dimen/progress_bar_size</item>
+        <item name="android:elevation">16dp</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region Button -->
+    <style name="Widget.Motivation.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAppearance">?attr/textAppearanceButton</item>
+        <item name="android:textColor">@color/btn_text_color</item>
+        <item name="cornerRadius">@dimen/button_corner_radius</item>
+        <item name="backgroundTint">@color/btn_bg_color</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!-- region BottomSheet -->
+    <style name="Widget.Motivation.BottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Motivation.BottomSheet
+        </item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Motivation.BottomSheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/bottom_navigation_corner_size</item>
+        <item name="cornerSizeTopLeft">@dimen/bottom_navigation_corner_size</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region CardView -->
+
+    <style name="Widget.Motivation.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">@dimen/card_view_corner_radius</item>
+        <item name="strokeColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="Widget.Motivation.CardView.Surface2">
+        <item name="cardBackgroundColor">?attr/colorSurface2</item>
+    </style>
+    <!-- endregion -->
+
+    <!-- region CheckBox -->
+    <style name="Widget.Motivation.CheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="android:textAppearance">?attr/textAppearanceBody2</item>
+        <item name="buttonTint">@color/check_box_btn_tint</item>
+    </style>
+    <!-- endregion -->
+
+    <!--  region Chip  -->
+
+    <!-- endregion -->
+
+    <!--  region TextInputEditText  -->
+    <!-- endregion -->
+
+    <!--  region TextInputLayout  -->
+
+    <!-- endregion -->
+
+    <!--  region TextView  -->
+    <style name="Widget.Motivation.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+
+    <!-- endregion -->
+
+    <!--  region Divider  -->
+    <style name="Widget.Motivation.Divider" parent="Widget.MaterialComponents.MaterialDivider">
+        <item name="dividerColor">?android:textColorPrimary</item>
+    </style>
+    <!-- endregion -->
+
+    <!--  region Divider  -->
+    <style name="Widget.Motivation.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="android:textAppearance">?attr/textAppearanceBodyMedium</item>
+        <item name="android:thumb">@drawable/switch_thumb</item>
+        <item name="track">@drawable/switch_track</item>
+        <item name="useMaterialThemeColors">false</item>
+        <item name="switchMinWidth">54dp</item>
+    </style>
+    <!-- endregion -->
+
+    <!--  region ShapeAppearance  -->
+
+    <!-- endregion -->
+
+</resources>
