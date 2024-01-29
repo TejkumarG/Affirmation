@@ -159,7 +159,7 @@ fun Fragment.checkSelfPermission(permission: String) = ContextCompat.checkSelfPe
 val Fragment.mainNavController: NavController
     get() {
         val supportFragmentManager = requireActivity().supportFragmentManager
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_container) as
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainer) as
             NavHostFragment
 
         return navHostFragment.navController

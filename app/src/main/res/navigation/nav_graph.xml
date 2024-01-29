@@ -9,5 +9,48 @@
         android:name="com.motivation.affirmations.ui.affirmation.AffirmationFragment"
         android:label="Affirmation"
         tools:layout="@layout/fragment_affirmation">
+
+        <action
+            android:id="@+id/action_nav_affirmation_to_nav_voice_recorder"
+            app:destination="@id/nav_voice_recorder" />
+
+        <action
+            android:id="@+id/action_nav_affirmation_to_nav_player"
+            app:destination="@id/nav_player" />
+
+        <action
+            android:id="@+id/action_nav_affirmation_to_moreDialog"
+            app:destination="@id/moreDialog" />
+        <action
+            android:id="@+id/action_nav_affirmation_to_playerDialog"
+            app:destination="@id/playerDialog" />
     </fragment>
+
+    <fragment
+        android:id="@+id/nav_voice_recorder"
+        android:name="com.motivation.affirmations.ui.voiceRecorder.VoiceRecorderFragment"
+        android:label="VoiceRecorder"
+        tools:layout="@layout/fragment_voice_recorder" />
+
+    <fragment
+        android:id="@+id/nav_player"
+        android:name="com.motivation.affirmations.ui.affirmatonPlayer.AffirmationPlayerFragment"
+        android:label="AffirmationPlayer"
+        tools:layout="@layout/fragment_affirmation_player" />
+
+    <dialog
+        android:id="@+id/moreDialog"
+        android:name="com.motivation.affirmations.ui.moreOptionDialog.MoreOptionDialogFragment"
+        android:label="MoreOptionDialog"
+        tools:layout="@layout/more_option_layout" >
+        <action
+            android:id="@+id/action_moreDialog_to_nav_voice_recorder"
+            app:destination="@id/nav_voice_recorder" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/playerDialog"
+        android:name="com.motivation.affirmations.ui.playerBottomSheet.PlayerBottomSheetFragment"
+        android:label="playerDialog"
+        tools:layout="@layout/player_bottom_sheet" />
 </navigation>

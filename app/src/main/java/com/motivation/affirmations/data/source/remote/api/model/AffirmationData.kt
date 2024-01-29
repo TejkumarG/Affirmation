@@ -1,4 +1,4 @@
-package com.motivation.affirmations.data.source.model.category
+package com.motivation.affirmations.data.source.remote.api.model
 
 /**
  * Created by Andriy Deputat email(andriy.deputat@gmail.com) on 11.01.2024.

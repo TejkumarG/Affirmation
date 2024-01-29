@@ -1,0 +1,125 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.motivation.affirmations.ui.voiceRecorder.VoiceRecorderFragment">
+
+    <ImageView
+        android:id="@+id/backButtonImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_25sdp"
+        android:src="@drawable/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/back_button_img" />
+
+    <TextView
+        android:id="@+id/headerTxt"
+        style="@style/TextAppearance.Motivation.Headline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20sdp"
+        android:text="@string/voice_recording"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/backButtonImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/backButtonImg" />
+
+    <TextView
+        android:id="@+id/displayTxt"
+        style="@style/TextAppearance.Motivation.Headline6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_70sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:fontFamily="@font/dm_sans_regular"
+        android:text="@string/i_am_worthy_of_love_and_kindness"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_17sdp"
+        app:layout_constraintTop_toBottomOf="@id/headerTxt" />
+
+    <ImageView
+        android:id="@+id/voiceRecordImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/light_mic"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/voice_record_img" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/playPauseContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/playPauseImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pause"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/play_pause_image" />
+
+        <TextView
+            android:id="@+id/playPauseTxt"
+            style="@style/TextAppearance.Material3.HeadlineSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tap_to_play"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/playPauseImg"
+            app:layout_constraintStart_toStartOf="@id/playPauseImg"
+            app:layout_constraintTop_toBottomOf="@id/playPauseImg" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/editImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:src="@drawable/edit"
+        app:layout_constraintBottom_toBottomOf="@id/playPauseContainer"
+        app:layout_constraintEnd_toStartOf="@id/playPauseContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/playPauseContainer"
+        android:contentDescription="@string/edit_image" />
+
+    <ImageView
+        android:id="@+id/deleteImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:src="@drawable/delete"
+        app:layout_constraintBottom_toBottomOf="@id/playPauseContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/playPauseContainer"
+        app:layout_constraintTop_toTopOf="@id/playPauseContainer"
+        android:contentDescription="@string/delete_img" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        style="@style/Widget.Motivation.Button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_margin="@dimen/_20sdp"
+        android:text="@string/save"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

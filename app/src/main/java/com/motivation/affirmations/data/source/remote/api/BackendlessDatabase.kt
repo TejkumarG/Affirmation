@@ -4,7 +4,7 @@ import com.backendless.Backendless
 import com.backendless.async.callback.AsyncCallback
 import com.backendless.exceptions.BackendlessException
 import com.backendless.exceptions.BackendlessFault
-import com.motivation.affirmations.data.source.model.category.AffirmationData
+import com.motivation.affirmations.data.source.remote.api.model.AffirmationData
 import javax.inject.Inject
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException

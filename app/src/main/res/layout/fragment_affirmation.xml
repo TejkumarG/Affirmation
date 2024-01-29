@@ -1,6 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg"
+    android:paddingTop="@dimen/_20sdp">
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/headerTxt"
+        style="@style/TextAppearance.Motivation.Headline4"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:text="@string/affirmations"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/headerTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/headerCrd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_12sdp"
+                app:cardBackgroundColor="@color/transact"
+                app:cardCornerRadius="@dimen/card_view_corner_radius"
+                app:layout_constraintTop_toBottomOf="@id/headerTxt"
+                android:outlineSpotShadowColor="@android:color/transparent"
+                app:strokeColor="@color/white"
+                app:strokeWidth="@dimen/_2sdp"
+                app:cardElevation="@dimen/cardview_default_elevation">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp">
+
+                    <TextView
+                        android:id="@+id/playlistTxt"
+                        style="@style/TextAppearance.Motivation.Headline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/playlist"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/affirmationTxt"
+                        style="@style/TextAppearance.Motivation.Body2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:fontFamily="@font/dm_sans_regular"
+                        android:text="@string/_0_affirmation"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/playlistTxt"
+                        app:layout_constraintStart_toEndOf="@id/playlistTxt" />
+
+                    <TextView
+                        android:id="@+id/affirmationDescriptionTxt"
+                        style="@style/TextAppearance.Motivation.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/dm_sans_regular"
+                        android:text="@string/affirmations_added_to_be_played_in_playlist"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="@id/playlistTxt"
+                        app:layout_constraintTop_toBottomOf="@id/playlistTxt" />
+
+                    <ImageView
+                        android:id="@+id/playlistPlayBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:src="@drawable/play_button"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="@id/affirmationDescriptionTxt"
+                        app:layout_constraintTop_toTopOf="@id/playlistTxt"
+                        android:contentDescription="@string/playlist_play_btn" />
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/white"
+                        app:layout_constraintTop_toBottomOf="@+id/affirmationDescriptionTxt"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginHorizontal="@dimen/_6sdp"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/playlistSelectAllLyt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:visibility="gone"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        app:layout_constraintTop_toBottomOf="@id/divider">
+
+                        <TextView
+                            android:id="@+id/playlistSelectAllTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/select_all"
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/white"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <CheckBox
+                            android:id="@+id/playlistSelectAllChk"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:button="@drawable/checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:outlineProvider="background"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/playlistSelectAllTxt"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/removeFromPlaylistBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/charcoal"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:paddingVertical="@dimen/_8sdp"
+                            android:textAllCaps="false"
+                            android:text="@string/remove_from_playlist"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp"
+                            app:cornerRadius="@dimen/button_corner_radius"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/playlistRv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/playlistSelectAllLyt"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        tools:itemCount="4"
+                        tools:listitem="@layout/affirmation_item"
+                        android:layout_marginTop="@dimen/_8sdp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/displayTextTxt"
+                style="@style/TextAppearance.Motivation.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_regular"
+                android:text="@string/empty_playlist_txt"
+                android:textSize="@dimen/_10sdp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:layout_marginHorizontal="@dimen/_40sdp"
+                android:layout_marginVertical="@dimen/_24sdp"
+                app:layout_constraintTop_toBottomOf="@id/headerCrd" />
+
+            <View
+                android:id="@+id/centerView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/affirmationSelectAllLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/selectAllTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_all"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <CheckBox
+                    android:id="@+id/selectAllChk"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:button="@drawable/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:outlineProvider="background"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/selectAllTxt"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/addToPlaylistBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/charcoal"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:paddingVertical="@dimen/_8sdp"
+                    android:textAllCaps="false"
+                    android:text="@string/add_to_playlist"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/white"
+                    app:cornerRadius="@dimen/button_corner_radius"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/affirmationRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/affirmation_item"
+                tools:itemCount="50"
+                android:overScrollMode="never"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/centerView"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

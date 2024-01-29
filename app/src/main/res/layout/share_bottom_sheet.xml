@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/white"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/rectangle_top_corner"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/first_row_share_btns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/whatsapp_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/whatsapp_img"
+                    android:padding="10dp"/>
+
+                <ImageView
+                    android:id="@+id/instagram_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/instagram_img"
+                    android:padding="10dp"/>
+
+                <ImageView
+                    android:id="@+id/fb_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fb_img"
+                    android:padding="10dp"/>
+
+                <ImageView
+                    android:id="@+id/twitter_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/twitter_img"
+                    android:padding="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/second_row_share_btns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/more_btn"
+                    android:layout_width="94dp"
+                    android:layout_height="87dp"
+                    android:padding="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/more_square"
+                        android:layout_width="22dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="25dp"
+                        android:paddingBottom="10dp"
+                        android:src="@drawable/more_square_img" />
+
+                    <ImageView
+                        android:id="@+id/more_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="17dp"
+                        android:src="@drawable/more_text" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/save_img_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/save_img"
+                    android:padding="10dp"/>
+
+                <ImageView
+                    android:id="@+id/copy_text_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/copy_text_img"
+                    android:padding="10dp"/>
+
+                <ImageView
+                    android:id="@+id/set_wallpaper_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/set_wallpaper_img"
+                    android:padding="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+</LinearLayout>

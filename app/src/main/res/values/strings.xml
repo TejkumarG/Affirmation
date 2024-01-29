@@ -2,4 +2,104 @@
     <string name="app_name">Motivation</string>
     <string name="share_via">Share Via</string>
     <string name="oops_we_cannot_do_this">Oops, we cannot do this</string>
+    <string name="affirmations">Affirmations</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back_button">Back Button</string>
+    <string name="playing_affirmations">Playing Affirmations</string>
+    <string name="play_button">Play Button</string>
+    <string name="next">Next</string>
+    <string name="stop">Stop</string>
+    <string name="cancel">Cancel</string>
+    <string name="Delete">Delete</string>
+    <string name="add_to_playlist">Add to Playlist</string>
+    <string name="saved">Saved</string>
+    <string name="remove_from_playlist">Remove From Playlist</string>
+    <string name="tap_to_play">Tap to play</string>
+    <string name="tap_to_record">Tap to Record</string>
+    <string name="recording">Recording…</string>
+    <string name="playing">Playing…</string>
+    <string name="recording_error">oops…Try again</string>
+    <string name="empty_playlist_txt">We recommend you to add and record at least 10 affirmations to get the best results</string>
+    <string name="affirmations_added_to_be_played_in_playlist">Affirmations added to be played in playlist.</string>
+    <string name="playlist">Playlist</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="affirmation_options">Affirmation Options</string>
+    <string name="add_recording">Add Recording</string>
+    <string name="edit_record">Edit Record\t</string>
+    <string name="delete_recording">Delete Recording</string>
+    <string name="share">Share</string>
+    <string name="delete_recording_">Delete Recording ?</string>
+    <string name="affirmations_description">Affirmations added to be played in playlist.</string>
+    <string name="mic_img">Mic Img</string>
+    <string name="settings_image">Settings Image</string>
+    <string name="_0_affirmation">/0 affirmation/</string>
+    <string name="playlist_play_btn">Playlist Play Btn</string>
+    <string name="select_all">Select All</string>
+    <string name="i_am_worthy_of_love_and_kindness">I am worthy of love and kindness.</string>
+    <string name="delete_img">Delete Img</string>
+    <string name="voice_record_img">Voice Record Img</string>
+    <string name="voice_recording">Voice Recording</string>
+    <string name="back_button_img">Back Button Img</string>
+    <string name="edit_image">Edit Image</string>
+    <string name="play_pause_image">Play Pause Image</string>
+    <string name="save">Save</string>
+    <string name="close_btn">Close Btn</string>
+    <string name="play_btn">Play Btn</string>
+    <string name="stop_btn">Stop Btn</string>
+    <string name="music_image">Music Image</string>
+    <string name="smiley_image">Smiley Image</string>
+    <string name="delete_description">Are you sure you want to delete this recording? This action cannot be undone.</string>
+
+    <string-array name="affirmations_list">
+        <item>I am worthy of love and kindness.</item>
+        <item>My life is a reflection of the positive energy I put into the world.</item>
+        <item>I trust in the process of life and let go of control.</item>
+        <item>I am a source of inspiration and motivation for others.</item>
+        <item>I attract abundance into my life with every breath I take.</item>
+        <item>Today, I choose joy and gratitude.</item>
+        <item>I am open to receiving the abundance of the universe</item>
+        <item>I release all fears and embrace the power within me.</item>
+        <item>My mind is filled with positive and loving thoughts.</item>
+        <item>I am a magnet for success and prosperity.</item>
+        <item>I am surrounded by supportive and uplifting people.</item>
+        <item>My possibilities are endless, and my potential is limitless.</item>
+        <item>I am confident, strong, and capable of achieving my goals.</item>
+        <item>I choose to be kind to myself and others.</item>
+        <item>Every challenge I face is an opportunity for growth and learning.</item>
+        <item>I trust the journey, even when I do not understand it.</item>
+        <item>I am at peace with my past, present, and future.</item>
+        <item>I radiate confidence, self-respect, and inner harmony.</item>
+        <item>My life is a constant stream of miracles and blessings.</item>
+        <item>I am in control of my thoughts, and I choose positivity.</item>
+        <item>I am aligned with the energy of abundance.</item>
+        <item>I am deserving of success, happiness, and fulfillment.</item>
+        <item>I let go of comparison and celebrate my unique qualities.</item>
+        <item>I am a vessel of love and compassion.</item>
+        <item>I am creating a life of passion, purpose, and joy.</item>
+        <item>I release all negativity from my mind and body.</item>
+        <item>I am grateful for the abundance that flows into my life.</item>
+        <item>My heart is open to giving and receiving love.</item>
+        <item>I attract positive experiences by being a positive person.</item>
+        <item>I am a beacon of light, and my energy is contagious.</item>
+        <item>I trust the timing of my life.</item>
+        <item>I am surrounded by opportunities, and I choose to seize them.</item>
+        <item>I am constantly evolving and improving.</item>
+        <item>I am the architect of my life, and I build its foundation with love and care.</item>
+        <item>I release the need for perfection and embrace my authentic self.</item>
+        <item>I am open to new and exciting possibilities.</item>
+        <item>I am a powerful creator, and I create the life I desire.</item>
+        <item>I am resilient and can overcome any obstacle.</item>
+        <item>I am a unique and valuable person.</item>
+        <item>I am filled with confidence, and my potential is limitless.</item>
+        <item>I trust in my ability to achieve my goals.</item>
+        <item>I am a magnet for miracles, and I am open to receiving them.</item>
+        <item>I choose to let go of what I can\'t control and focus on what I can.</item>
+        <item>I am worthy of all the good things life has to offer.</item>
+        <item>I am a loving and lovable person.</item>
+        <item>I attract positivity, and positive things come to me effortlessly.</item>
+        <item>I release the past and live fully in the present moment.</item>
+        <item>I am grateful for the lessons of the past and excited for the blessings of the future.</item>
+        <item>I am constantly learning, growing, and evolving.</item>
+        <item>I am a beacon of love, and I attract loving relationships into my life.</item>
+    </string-array>
 </resources>

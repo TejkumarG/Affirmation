@@ -37,6 +37,8 @@
 
     <color name="yankees_blue">#242B43</color>
 
+    <color name="transact">#44ffffff</color>
+
     <!-- Colors for [ic_feedback_sent.xml] drawable -->
     <!-- End of colors for [ic_feedback_sent.xml] drawable -->
 

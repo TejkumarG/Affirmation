@@ -1,7 +1,7 @@
 #TODO update versions
 [versions]
 #versions updated 31.03.2023
-androidGradlePlugin = "7.4.2"
+androidGradlePlugin = "8.2.1"
 androidxAppCompat = "1.6.1"
 androidxCore = "1.9.0"
 androidxNavigation = "2.5.3"
@@ -14,6 +14,7 @@ hilt-android-compliler = "1.0.0"
 hilt-work = "1.0.0"
 kotlin = "1.8.20"
 kotlinxCoroutines = "1.6.4"
+kotlinxSerializationJson = "1.6.0"
 leakcanary = "2.9.1"
 lottie = "6.0.0"
 material = "1.8.0"
@@ -70,6 +71,7 @@ hilt-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hilt-w
 kotlinx-coroutines-play = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-play-services", version.ref = "kotlinxCoroutines" }
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
 kotlinx-coroutines-core-jvm = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core-jvm", version.ref = "kotlinxCoroutines" }
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 play-core = { group = "com.google.android.play", name = "core", version.ref = "play-core" }
 play-core-ktx = { group = "com.google.android.play", name = "core-ktx", version.ref = "play-core-ktx" }
