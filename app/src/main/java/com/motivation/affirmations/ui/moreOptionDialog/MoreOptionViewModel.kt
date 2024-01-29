@@ -10,12 +10,12 @@ import com.motivation.affirmations.domain.usecases.affirmation.GetRecordByIdUseC
 import com.motivation.affirmations.ui.core.BaseViewModel
 import com.motivation.affirmations.util.ContentShareHelper
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 @HiltViewModel
 class MoreOptionViewModel @Inject constructor(
@@ -42,7 +42,7 @@ class MoreOptionViewModel @Inject constructor(
         }
     }
 
-    fun share(affirmation: Affirmation){
+    fun share(affirmation: Affirmation) {
         shareHelper.share(affirmation)
     }
 }

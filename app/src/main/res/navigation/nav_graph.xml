@@ -28,7 +28,7 @@
 
     <fragment
         android:id="@+id/nav_voice_recorder"
-        android:name="com.motivation.affirmations.ui.voice_recorder.VoiceRecorderFragment"
+        android:name="com.motivation.affirmations.ui.voiceRecorder.VoiceRecorderFragment"
         android:label="VoiceRecorder"
         tools:layout="@layout/fragment_voice_recorder" />
 

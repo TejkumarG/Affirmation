@@ -19,9 +19,11 @@ data class AffirmationEntity(
             this === other -> true
             javaClass != other?.javaClass -> false
             else -> (other as AffirmationEntity).let { _ ->
-                (id == other.id && fileName == other.fileName && filePath == other.filePath &&
-                        date == other.date && duration == other.duration && isPlayList == other.isPlayList &&
-                        text == other.text)
+                (
+                    id == other.id && fileName == other.fileName && filePath == other.filePath &&
+                        date == other.date && duration == other.duration &&
+                        isPlayList == other.isPlayList && text == other.text
+                    )
             }
         }
     }

@@ -9,7 +9,7 @@ import java.io.File
 import javax.inject.Inject
 
 class VoiceRecordingHelper @Inject constructor(
-    @ApplicationContext private val context: Context,
+    @ApplicationContext private val context: Context
 ) {
 
     private var recorder: MediaRecorder? = null
@@ -19,7 +19,7 @@ class VoiceRecordingHelper @Inject constructor(
     private var startTime = 0L
     private var endTime = 0L
 
-    fun getStartTime(): Long{
+    fun getStartTime(): Long {
         return this.startTime
     }
 

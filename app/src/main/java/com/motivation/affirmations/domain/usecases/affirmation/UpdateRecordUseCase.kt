@@ -4,9 +4,9 @@ import com.motivation.affirmations.data.repository.AffirmationRepository
 import com.motivation.affirmations.domain.model.UserAffirmation
 import com.motivation.affirmations.domain.model.params.AffirmationListParam
 import com.motivation.affirmations.domain.usecases.core.flow.FlowUseCase
+import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import javax.inject.Inject
 
 class UpdateRecordUseCase @Inject constructor(
     private val repo: AffirmationRepository,

@@ -4,8 +4,8 @@ import com.motivation.affirmations.data.repository.AffirmationRepository
 import com.motivation.affirmations.domain.model.enums.ActionState
 import com.motivation.affirmations.domain.model.params.DeleteRecordParam
 import com.motivation.affirmations.domain.usecases.core.flow.FlowUseCase
-import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
+import kotlinx.coroutines.flow.flow
 
 class DeleteRecordUseCase @Inject constructor(
     private val repo: AffirmationRepository

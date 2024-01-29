@@ -29,5 +29,4 @@ object DatabaseModule {
     @Provides
     fun provideAudioRecorderDao(motivationDB: MotivationAppDB): AffirmationDAO =
         motivationDB.affirmationDAO()
-
 }

@@ -8,7 +8,7 @@ data class Affirmation(
     var duration: String,
     var date: Long,
     var isPlayList: Boolean,
-    var isSelected: Boolean,
+    var isSelected: Boolean
 ) {
     var isRecorded = filePath.isNotEmpty()
 

@@ -28,7 +28,7 @@ object DataSourceModule {
     @Provides
     @Singleton
     fun providesAppAssetManager(
-        @ApplicationContext context: Context,
+        @ApplicationContext context: Context
     ): AppAssetManager = AppAssetManager(context.assets::open)
 
     @Provides

@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.motivation.affirmations.domain.model.Affirmation
 import com.motivation.affirmations.domain.model.enums.AffirmationClickEvent
-import com.motivation.affirmations.domain.model.enums.AffirmationClickEvent.*
 import com.motivation.app.R
 import com.motivation.app.databinding.AffirmationItemBinding
 
@@ -26,15 +25,15 @@ class AffirmationsListAdapter :
         )
     }
 
-    fun isSelectionIsAvailable() : Boolean{
+    fun isSelectionIsAvailable(): Boolean {
         return currentList.isNotEmpty() && currentList.any { it.isSelected }
     }
 
-    fun isAllSelected() : Boolean {
+    fun isAllSelected(): Boolean {
         return currentList.isNotEmpty() && currentList.all { it.isSelected }
     }
 
-    fun selectedIds() : List<Int>{
+    fun selectedIds(): List<Int> {
         return currentList.filter { it.isSelected }.map { it.id }
     }
 
@@ -50,11 +49,11 @@ class AffirmationsListAdapter :
 
     override fun onBindViewHolder(holder: AffirmationViewHolder, position: Int) {
         holder.bind(getItem(position)) { event, value ->
-            if (event == ON_SELECT && value is Boolean) {
+            if (event == AffirmationClickEvent.ON_SELECT && value is Boolean) {
                 currentList[position].isSelected = value
             }
             onClick?.let {
-                it(event,value)
+                it(event, value)
             }
         }
     }
@@ -65,21 +64,27 @@ class AffirmationsListAdapter :
             binding.apply {
                 affirmationDescriptionTxt.text = affirmation.text
                 selectChk.isChecked = affirmation.isSelected
-                micImg.setImageResource(if(affirmation.isRecorded) R.drawable.ic_dark_play else R.drawable.ic_dark_mic)
+                micImg.setImageResource(
+                    if (affirmation.isRecorded) R.drawable.ic_dark_play else R.drawable.ic_dark_mic
+                )
                 onClick?.let {
                     micImg.setOnClickListener {
                         it(
-                            if(affirmation.isRecorded) ON_PLAY else ON_RECORD,
+                            if (affirmation.isRecorded) {
+                                AffirmationClickEvent.ON_PLAY
+                            } else {
+                                AffirmationClickEvent.ON_RECORD
+                            },
                             affirmation.id
                         )
                     }
 
                     settingsImg.setOnClickListener {
-                        it(ON_MORE, affirmation.id)
+                        it(AffirmationClickEvent.ON_MORE, affirmation.id)
                     }
 
                     selectChk.setOnClickListener {
-                        it(ON_SELECT, selectChk.isChecked)
+                        it(AffirmationClickEvent.ON_SELECT, selectChk.isChecked)
                     }
                 }
             }

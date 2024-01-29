@@ -12,7 +12,6 @@ import com.motivation.affirmations.ui.core.extensions.computeVisibility
 import com.motivation.affirmations.ui.core.extensions.getVisibleGone
 import com.motivation.affirmations.ui.core.extensions.mainNavController
 import com.motivation.affirmations.ui.core.extensions.showSavedDialog
-import com.motivation.affirmations.ui.core.extensions.showToastShort
 import com.motivation.app.R
 import com.motivation.app.databinding.FragmentAffirmationBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -46,16 +45,20 @@ class AffirmationFragment : ViewBindingFragment<FragmentAffirmationBinding>() {
     }
 
     override fun setListeners() {
-        affirmationAdapter.onItemClick(getAffirmationEventHandler {
-            binding.affirmationSelectAllLyt.visibility =
-                affirmationAdapter.isSelectionIsAvailable().computeVisibility()
-            binding.selectAllChk.isChecked = affirmationAdapter.isAllSelected()
-        })
-        playListAdapter.onItemClick(getAffirmationEventHandler {
-            binding.playlistSelectAllLyt.visibility =
-                playListAdapter.isSelectionIsAvailable().getVisibleGone()
-            binding.playlistSelectAllChk.isChecked = playListAdapter.isAllSelected()
-        })
+        affirmationAdapter.onItemClick(
+            getAffirmationEventHandler {
+                binding.affirmationSelectAllLyt.visibility =
+                    affirmationAdapter.isSelectionIsAvailable().computeVisibility()
+                binding.selectAllChk.isChecked = affirmationAdapter.isAllSelected()
+            }
+        )
+        playListAdapter.onItemClick(
+            getAffirmationEventHandler {
+                binding.playlistSelectAllLyt.visibility =
+                    playListAdapter.isSelectionIsAvailable().getVisibleGone()
+                binding.playlistSelectAllChk.isChecked = playListAdapter.isAllSelected()
+            }
+        )
 
         binding.apply {
             playlistPlayBtn.setOnClickListener {
@@ -76,16 +79,18 @@ class AffirmationFragment : ViewBindingFragment<FragmentAffirmationBinding>() {
             }
 
             selectAllChk.setOnClickListener {
-                if (selectAllChk.isChecked)
+                if (selectAllChk.isChecked) {
                     affirmationAdapter.selectAll()
-                else
+                } else {
                     affirmationAdapter.unSelectAll()
+                }
             }
             playlistSelectAllChk.setOnClickListener {
-                if (playlistSelectAllChk.isChecked)
+                if (playlistSelectAllChk.isChecked) {
                     playListAdapter.selectAll()
-                else
+                } else {
                     playListAdapter.unSelectAll()
+                }
             }
             addToPlaylistBtn.setOnClickListener {
                 viewModel.addToPlayList(affirmationAdapter.selectedIds())
@@ -96,7 +101,9 @@ class AffirmationFragment : ViewBindingFragment<FragmentAffirmationBinding>() {
         }
     }
 
-    private fun getAffirmationEventHandler(onSelectChange: () -> Unit): (AffirmationClickEvent, Any) -> Unit {
+    private fun getAffirmationEventHandler(
+        onSelectChange: () -> Unit
+    ): (AffirmationClickEvent, Any) -> Unit {
         return { event, pos ->
             when (event) {
                 AffirmationClickEvent.ON_SELECT -> {

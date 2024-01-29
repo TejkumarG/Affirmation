@@ -11,7 +11,7 @@ fun Affirmation.toEntity() = AffirmationEntity(
     filePath = filePath,
     duration = duration,
     date = date,
-    isPlayList = isPlayList,
+    isPlayList = isPlayList
 )
 
 fun AffirmationEntity.toModel() = Affirmation(
@@ -32,5 +32,5 @@ fun AffirmationData.asEntity() = AffirmationEntity(
     filePath = "",
     date = 0L,
     duration = "",
-    isPlayList = false,
+    isPlayList = false
 )

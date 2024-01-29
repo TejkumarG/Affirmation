@@ -41,5 +41,5 @@ interface AffirmationDAO {
     fun updateAll(affirmations: List<AffirmationEntity>)
 
     @Query("Update affirmations SET isPlayList = :isPlayList Where id in (:ids)")
-    fun changeIsPlayList(ids : List<Int>, isPlayList: Boolean)
+    fun changeIsPlayList(ids: List<Int>, isPlayList: Boolean)
 }

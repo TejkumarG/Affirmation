@@ -58,7 +58,7 @@ class PlayerBottomSheetFragment : BaseBottomSheetDialogFragment<PlayerBottomShee
             }
             launch {
                 viewModel.affirmation.collectLatest {
-                    if(it.fileName.isNotEmpty()) {
+                    if (it.fileName.isNotEmpty()) {
                         binding.affirmationTxt.text = it.text
                     }
                 }

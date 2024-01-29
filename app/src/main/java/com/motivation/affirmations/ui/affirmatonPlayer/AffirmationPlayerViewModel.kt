@@ -7,6 +7,7 @@ import com.motivation.affirmations.domain.usecases.affirmation.GetUserAffirmatio
 import com.motivation.affirmations.ui.core.BaseViewModel
 import com.motivation.affirmations.util.MediaPlayerHelper
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -15,12 +16,11 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 @HiltViewModel
 class AffirmationPlayerViewModel @Inject constructor(
     private val mediaPlayer: MediaPlayerHelper,
-    private val getAffirmations: GetUserAffirmationsUseCase,
+    private val getAffirmations: GetUserAffirmationsUseCase
 ) : BaseViewModel() {
 
     private val _playList = MutableStateFlow(emptyList<Affirmation>())
@@ -36,7 +36,7 @@ class AffirmationPlayerViewModel @Inject constructor(
         viewModelScope.launch {
             getAffirmations.run().collectLatest { affirmation ->
                 _playList.update { affirmation.playlist }
-                if(_playList.value.isEmpty()) {
+                if (_playList.value.isEmpty()) {
                     finish()
                     return@collectLatest
                 }
@@ -49,7 +49,7 @@ class AffirmationPlayerViewModel @Inject constructor(
     fun playPausePlayer() {
         when (playerState.value) {
             PlayerState.INITIAL -> {
-                if(affirmation.value.fileName.isEmpty()) {
+                if (affirmation.value.fileName.isEmpty()) {
                     playNoAudioAffirmation()
                 } else {
                     try {

@@ -8,7 +8,7 @@ import java.io.IOException
 import javax.inject.Inject
 
 class MediaPlayerHelper @Inject constructor(
-    @ApplicationContext private val context: Context,
+    @ApplicationContext private val context: Context
 ) {
 
     private var player: MediaPlayer? = null

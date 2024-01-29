@@ -10,7 +10,7 @@ data class SaveRecordParam(
     var duration: String,
     var affirmation: AffirmationEntity
 ) : UseCase.Params {
-    fun updated() : AffirmationEntity{
+    fun updated(): AffirmationEntity {
         affirmation.fileName = fileName
         affirmation.filePath = filePath
         affirmation.date = date

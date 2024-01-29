@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context="com.motivation.affirmations.ui.voice_recorder.VoiceRecorderFragment">
+    tools:context="com.motivation.affirmations.ui.voiceRecorder.VoiceRecorderFragment">
 
     <ImageView
         android:id="@+id/backButtonImg"

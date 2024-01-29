@@ -19,7 +19,7 @@ object RepositoryModule {
     @Provides
     @Singleton
     fun providesRepository(
-        db : MotivationAppDB,
+        db: MotivationAppDB,
         dataSource: AffirmationDataSource
-    ): AffirmationRepository = AffirmationRepositoryImpl(db,dataSource)
+    ): AffirmationRepository = AffirmationRepositoryImpl(db, dataSource)
 }

@@ -12,11 +12,11 @@ import com.motivation.affirmations.domain.usecases.affirmation.UpdateRecordUseCa
 import com.motivation.affirmations.domain.usecases.core.UseCase
 import com.motivation.affirmations.ui.core.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flow
-import javax.inject.Inject
 
 /**
  * Created by Andriy Deputat email(andriy.deputat@gmail.com) on 11.01.2024.
@@ -26,10 +26,11 @@ class AffirmationViewModel @Inject constructor(
     private val getAffirmationsUseCase: GetUserAffirmationsUseCase,
     private val updateRecordUseCase: UpdateRecordUseCase,
     private val saveToPlayListUseCase: SaveToPlayListUseCase,
-    private val deleteFromPlaylistUseCase: DeleteFromPlaylistUseCase,
+    private val deleteFromPlaylistUseCase: DeleteFromPlaylistUseCase
 ) : BaseViewModel() {
 
-    private val _actions : MutableStateFlow<UseCase.Params> = MutableStateFlow(UseCase.None)
+    private val _actions: MutableStateFlow<UseCase.Params> = MutableStateFlow(UseCase.None)
+
     @OptIn(ExperimentalCoroutinesApi::class)
     val affirmations = _actions.flatMapLatest {
         when (it) {
@@ -45,15 +46,15 @@ class AffirmationViewModel @Inject constructor(
         }
     }
 
-    fun reload(){
+    fun reload() {
         _actions.value = LoadUserAffirmationsParam
     }
 
-    fun addToPlayList(ids : List<Int>){
+    fun addToPlayList(ids: List<Int>) {
         _actions.value = SaveToPlayListParam(ids)
     }
 
-    fun removeFromPlayList(ids : List<Int>){
+    fun removeFromPlayList(ids: List<Int>) {
         _actions.value = DeleteFromPlayListParam(ids)
     }
 }

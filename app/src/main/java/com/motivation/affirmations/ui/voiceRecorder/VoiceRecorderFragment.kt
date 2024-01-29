@@ -1,4 +1,4 @@
-package com.motivation.affirmations.ui.voice_recorder
+package com.motivation.affirmations.ui.voiceRecorder
 
 import android.app.Dialog
 import android.os.Bundle
@@ -135,7 +135,8 @@ class VoiceRecorderFragment : ViewBindingFragment<FragmentVoiceRecorderBinding>(
 
     private fun playPauseClick() {
         when (binding.playPauseTxt.text) {
-            getString(R.string.tap_to_record), getString(R.string.recording_error) -> viewModel.startRecording()
+            getString(R.string.tap_to_record), getString(R.string.recording_error) ->
+                viewModel.startRecording()
             getString(R.string.recording) -> viewModel.pauseRecording()
             getString(R.string.tap_to_play) -> viewModel.playRecording()
             getString(R.string.playing) -> viewModel.pausePlaying()
@@ -164,7 +165,7 @@ class VoiceRecorderFragment : ViewBindingFragment<FragmentVoiceRecorderBinding>(
         }
     }
 
-    private fun showDeleteDialog()  = Dialog(requireContext()).apply {
+    private fun showDeleteDialog() = Dialog(requireContext()).apply {
         val binding = DeleteRecordingPopupBinding.inflate(LayoutInflater.from(requireContext()))
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         setCancelable(false)

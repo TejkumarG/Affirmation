@@ -5,9 +5,9 @@ import com.motivation.affirmations.data.source.local.db.MotivationAppDB
 import com.motivation.affirmations.data.source.local.db.entities.AffirmationEntity
 import com.motivation.affirmations.data.source.mapper.asEntity
 import com.motivation.affirmations.data.source.remote.api.model.AffirmationData
+import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import javax.inject.Inject
 
 class AffirmationRepositoryImpl @Inject constructor(
     val db: MotivationAppDB,
@@ -25,7 +25,7 @@ class AffirmationRepositoryImpl @Inject constructor(
         return affirmations
     }
 
-    override suspend fun saveRecord(affirmation: AffirmationEntity) : AffirmationEntity{
+    override suspend fun saveRecord(affirmation: AffirmationEntity): AffirmationEntity {
         return withContext(Dispatchers.IO) {
             db.affirmationDAO().update(affirmation)
             return@withContext db.affirmationDAO().get(affirmation.id)
@@ -33,18 +33,20 @@ class AffirmationRepositoryImpl @Inject constructor(
     }
 
     override suspend fun saveToPlaylist(ids: List<Int>) {
-        withContext(Dispatchers.IO){
+        withContext(Dispatchers.IO) {
             db.affirmationDAO().changeIsPlayList(ids, true)
         }
     }
 
     override suspend fun removeFromPlaylist(ids: List<Int>) {
-        withContext(Dispatchers.IO){
+        withContext(Dispatchers.IO) {
             db.affirmationDAO().changeIsPlayList(ids, false)
         }
     }
 
-    override suspend fun updateRecords(affirmations: List<AffirmationEntity>): List<AffirmationEntity> {
+    override suspend fun updateRecords(
+        affirmations: List<AffirmationEntity>
+    ): List<AffirmationEntity> {
         return withContext(Dispatchers.IO) {
             db.affirmationDAO().updateAll(affirmations)
             db.affirmationDAO().getAll()

@@ -1,4 +1,4 @@
-package com.motivation.affirmations.ui.voice_recorder
+package com.motivation.affirmations.ui.voiceRecorder
 
 import androidx.lifecycle.viewModelScope
 import com.motivation.affirmations.data.source.mapper.toEntity
@@ -8,13 +8,14 @@ import com.motivation.affirmations.domain.model.enums.PlayerState
 import com.motivation.affirmations.domain.model.enums.RecordingState
 import com.motivation.affirmations.domain.model.params.GetRecordParam
 import com.motivation.affirmations.domain.model.params.SaveRecordParam
+import com.motivation.affirmations.domain.usecases.affirmation.DeleteRecordUseCase
 import com.motivation.affirmations.domain.usecases.affirmation.GetRecordByIdUseCase
 import com.motivation.affirmations.domain.usecases.affirmation.SaveRecordUseCase
-import com.motivation.affirmations.domain.usecases.affirmation.DeleteRecordUseCase
 import com.motivation.affirmations.ui.core.BaseViewModel
 import com.motivation.affirmations.util.MediaPlayerHelper
 import com.motivation.affirmations.util.VoiceRecordingHelper
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -23,7 +24,6 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 @HiltViewModel
 class VoiceRecorderViewModel @Inject constructor(
@@ -75,10 +75,12 @@ class VoiceRecorderViewModel @Inject constructor(
     }
 
     fun deleteRecording() {
-        if (recorderState.value == RecordingState.RECORD)
+        if (recorderState.value == RecordingState.RECORD) {
             pauseRecording()
-        if (playerState.value == PlayerState.PLAY)
+        }
+        if (playerState.value == PlayerState.PLAY) {
             mediaPlayer.stop()
+        }
         _recorderState.update { RecordingState.INITIAL }
         _playerState.update { PlayerState.INITIAL }
     }

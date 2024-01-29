@@ -5,8 +5,8 @@ import com.motivation.affirmations.domain.model.UserAffirmation
 import com.motivation.affirmations.domain.model.params.AffirmationListParam
 import com.motivation.affirmations.domain.model.params.DeleteFromPlayListParam
 import com.motivation.affirmations.domain.usecases.core.flow.FlowUseCase
-import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
+import kotlinx.coroutines.flow.flow
 
 class DeleteFromPlaylistUseCase @Inject constructor(
     private val repo: AffirmationRepository,

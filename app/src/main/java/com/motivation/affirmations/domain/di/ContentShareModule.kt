@@ -16,5 +16,6 @@ object ContentShareModule {
     @Provides
     @Singleton
     fun providesShareHelper(
-        @ApplicationContext context: Context):ContentShareHelper = ContentShareHelper(context)
+        @ApplicationContext context: Context
+    ): ContentShareHelper = ContentShareHelper(context)
 }

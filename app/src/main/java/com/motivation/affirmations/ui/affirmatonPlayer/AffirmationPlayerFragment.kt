@@ -47,7 +47,6 @@ class AffirmationPlayerFragment : ViewBindingFragment<FragmentAffirmationPlayerB
         }
     }
 
-
     override fun addObservers() {
         lifecycleScope.launch {
             launch {
