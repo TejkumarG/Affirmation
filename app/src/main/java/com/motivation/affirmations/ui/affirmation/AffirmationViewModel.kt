@@ -11,7 +11,6 @@ import com.motivation.affirmations.domain.usecases.affirmation.SaveToPlayListUse
 import com.motivation.affirmations.domain.usecases.affirmation.UpdateRecordUseCase
 import com.motivation.affirmations.domain.usecases.core.UseCase
 import com.motivation.affirmations.ui.core.BaseViewModel
-import com.motivation.affirmations.util.ContentShareHelper
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -28,7 +27,6 @@ class AffirmationViewModel @Inject constructor(
     private val updateRecordUseCase: UpdateRecordUseCase,
     private val saveToPlayListUseCase: SaveToPlayListUseCase,
     private val deleteFromPlaylistUseCase: DeleteFromPlaylistUseCase,
-    private val contentShareHelper: ContentShareHelper
 ) : BaseViewModel() {
 
     private val _actions : MutableStateFlow<UseCase.Params> = MutableStateFlow(UseCase.None)
@@ -57,9 +55,5 @@ class AffirmationViewModel @Inject constructor(
 
     fun removeFromPlayList(ids : List<Int>){
         _actions.value = DeleteFromPlayListParam(ids)
-    }
-
-    fun share(affirmation: Affirmation){
-        contentShareHelper.share(affirmation)
     }
 }
